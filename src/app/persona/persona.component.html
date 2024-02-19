@@ -1,0 +1,46 @@
+<p>persona works!</p>
+
+<form action="">
+    <div>
+        <label for="">Nombre
+            <input type="text" #Nombre name="Nombre" id="" required>
+        </label>
+        <br>
+        <label for="">Apellido
+            <input type="text" #Apellido name="Apellido" id="" required>
+        </label>
+        <br>
+        <label for="">Cedula
+            <input type="text" #Cedula name="Cedula" id="" required>
+        </label>
+        <br>
+        <label for="">Correo
+            <input type="text" #Correo name="Correo" id="" required>
+        </label>
+        <br>
+        <label for="">Telefono
+            <input type="text" #Telefono name="Telefono" id="" required>
+        </label>
+        <br>
+        <label for="">Especialidad
+            <input type="text" #Especialidad name="Especialidad" id="" required>
+        </label>
+        <br>
+        <select class="form-select" #typeusers_id name="typeusers_id" aria-label="Default select example">
+            <option selected>Tipo</option>
+    
+            @for (item of cat; track $index) {
+            <option value="{{item.id}}">{{item.type}}</option>
+           
+            }
+            
+          </select>
+        <br>
+        <button type="button" (click)="registerPersona(Nombre, Apellido, Cedula, Correo, Telefono, Especialidad, typeusers_id)">Registrar</button>
+    </div>
+</form>
+    
+<h1>{{mgs}}</h1>
+
+
+<h2>BUSCAR MEDICO</h2>
